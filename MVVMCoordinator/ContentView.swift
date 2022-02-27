@@ -57,7 +57,7 @@ struct ContentView<VM: ContentViewModelProtocol & ContentFlowStateProtocol>: Vie
                     Button {
                         viewModel.thirdAction()
                     } label: {
-                        Image(systemName: "gearshape")
+                        Image(systemName: "building.2")
                     }
                     
                     Spacer()
@@ -69,7 +69,7 @@ struct ContentView<VM: ContentViewModelProtocol & ContentFlowStateProtocol>: Vie
                 
             }
         }
-        .navigationBarTitle("Title", displayMode: .inline)
+        .navigationBarTitle("List", displayMode: .inline)
         
     }
 }
