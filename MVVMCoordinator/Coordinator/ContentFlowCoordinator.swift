@@ -35,7 +35,7 @@ struct ContentFlowCoordinator<State: ContentFlowStateProtocol, Content: View>: V
     @ViewBuilder private var navigationLinks: some View {
         NavigationLink(tag: .firstLink, selection: activeLink, destination: firstDestination) { EmptyView() }
         NavigationLink(tag: .secondLink, selection: activeLink, destination: secondDestination) { EmptyView() }
-        NavigationLink(tag: .thirdLink, selection: activeLink, destination: secondDestination) { EmptyView() }
+        NavigationLink(tag: .thirdLink, selection: activeLink, destination: thirdDestination) { EmptyView() }
     }
 
     private func firstDestination() -> some View {
@@ -62,7 +62,7 @@ struct ContentFlowCoordinator<State: ContentFlowStateProtocol, Content: View>: V
 
     private func thirdDestination() -> some View {
         let viewModel = ThirdViewModel()
-        let view = ThirdView(viewModel: viewModel)
+        let view = ThirdView(viewModel: viewModel, user: ThirdViewModel().users[0])
         return view
     }
 

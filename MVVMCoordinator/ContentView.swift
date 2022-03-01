@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView<VM: ContentViewModelProtocol & ContentFlowStateProtocol>: View {
 
     @StateObject var viewModel: VM
-
+    
     var body: some View {
         ContentFlowCoordinator(state: viewModel, content: content)
     }
@@ -23,7 +23,9 @@ struct ContentView<VM: ContentViewModelProtocol & ContentFlowStateProtocol>: Vie
             VStack {
                 List {
                     ForEach(viewModel.users) { item in
-                        Text(item.name)
+                        if let name = item.name{
+                            Text(name)
+                        }
                     }
                 }
                 HStack {

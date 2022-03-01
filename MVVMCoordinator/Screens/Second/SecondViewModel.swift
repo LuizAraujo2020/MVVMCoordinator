@@ -14,7 +14,7 @@ final class SecondViewModel: SecondViewModelProtocol, SecondFlowStateProtocol {
         if let number = number {
             self.text = "Second View with number: \(number)"
         } else {
-            self.text = "Default Second View"
+            self.text = "Default Second Visadfsasew"
         }
     }
 }

@@ -23,6 +23,8 @@ enum ContentLink: Hashable, Identifiable {
             return .firstLink
         case .secondLinkParametrized:
             return .secondLink
+        case .thirdLink:
+            return .thirdLink
         default:
             return self
         }
