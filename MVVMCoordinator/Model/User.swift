@@ -47,3 +47,4 @@ let userMock: [User] = [
     User(id: UUID(), name: "sasdasd8", symbol: symbols[8], timestamp: Date()),
     User(id: UUID(), name: "sasdasd9", symbol: symbols[9], timestamp: Date())
 ]
+
