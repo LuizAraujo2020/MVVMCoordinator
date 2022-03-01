@@ -1,3 +1,10 @@
+//
+//  FirstView.swift
+//  MVVMCoordinator
+//
+//  Created by Luiz Araujo on 27/02/22.
+//
+
 import SwiftUI
 
 struct FirstView<VM: FirstViewModelProtocol & FirstFlowStateProtocol>: View {
@@ -16,8 +23,8 @@ struct FirstView<VM: FirstViewModelProtocol & FirstFlowStateProtocol>: View {
     }
 }
 
-//struct FirstView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        FirstView(viewModel: MockFirstViewModel())
-//    }
-//}
+struct FirstView_Previews: PreviewProvider {
+    static var previews: some View {
+        FirstView(viewModel: FirstViewModel(text: "text 1"))
+    }
+}

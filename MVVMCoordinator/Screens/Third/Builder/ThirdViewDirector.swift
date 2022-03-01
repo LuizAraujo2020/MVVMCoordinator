@@ -7,54 +7,19 @@
 
 import SwiftUI
 
-//enum TypeOfThirdView {
-//    - id:
-//    - name:
-//    - symbol:
-//    - timestamp:
-//}
-
-final class ThirdViewDirector<T: ThirdViewBuilder> {//<T: ThirdViewBuilder> {
+final class ThirdViewDirector<T: ThirdViewBuilder> {
     private var builder: T
     
     init(user: User) {
         self.builder = T(user: user)
     }
     
-    /// Wh
+    /// Make the view to be displayed in the
     ///
-    /// - Parameters:
-    ///     - id:
-    ///     - name:
-    ///     - symbol:
-    ///     - timestamp:
+    /// - Parameters: says if the respective field should be shown
     ///
-    /// - Returns: The 
-    func makeViewA(hasId: Bool = true, hasName: Bool = true, hasSymbol: Bool = true, hasTimestamp: Bool = true) -> T.someView {
-        self.builder.reset()
-        
-        if !hasId {
-            self.builder.dontMakeIDPart()
-        }
-        
-        if !hasName {
-            self.builder.dontMakeNamePart()
-        }
-        
-        if !hasSymbol {
-            self.builder.dontMakeSymbolPart()
-        }
-        
-        if !hasTimestamp {
-            self.builder.dontMaketTimestampPart()
-        }
-        
-        
-        return self.builder.result()
-    }
-    
-    func makeViewB(hasId: Bool = true, hasName: Bool = true, hasSymbol: Bool = true, hasTimestamp: Bool = true) -> T.someView {
-        self.builder.reset()
+    /// - Returns: The View to be displayed
+    func makeView(hasId: Bool = true, hasName: Bool = true, hasSymbol: Bool = true, hasTimestamp: Bool = true) -> T.someView {
         
         if !hasId {
             self.builder.dontMakeIDPart()

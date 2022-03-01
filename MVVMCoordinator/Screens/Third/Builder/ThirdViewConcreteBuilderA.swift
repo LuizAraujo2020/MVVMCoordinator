@@ -7,24 +7,13 @@
 
 import SwiftUI
 
-
 class ThirdViewConcreteBuilderA: ThirdViewBuilder {
-//    var idPart = IdPart()
-//    var namePart = NamePart()
-//    var symbolPart = SymbolPart()
-//    var timestampPart = TimestampPart()
-    
-    internal var user: User = User(id: UUID(), name: " ", symbol: "", timestamp: Date())
-    
-//    @State var viewMenuState = ViewMenuState()
+    internal var user: User
     
     required init(user: User) {
         self.user = user
     }
     
-    func reset() {
-        
-    }
     
     func dontMakeIDPart() {
         self.user.id = nil
@@ -41,6 +30,7 @@ class ThirdViewConcreteBuilderA: ThirdViewBuilder {
     func dontMaketTimestampPart() {
         self.user.timestamp = nil
     }
+    
 
     func result() -> some View {
         
@@ -124,147 +114,3 @@ fileprivate struct ViewMenu: View {
         }
     }
 }
-
-////
-////  ThirdViewConcreteBuilderA.swift
-////  MVVMCoordinator
-////
-////  Created by Luiz Araujo on 27/02/22.
-////
-//
-//import SwiftUI
-//
-//
-//class ThirdViewConcreteBuilderA: ThirdViewBuilder {
-//    var idPart = IdPart()
-//    var namePart = NamePart()
-//    var symbolPart = SymbolPart()
-//    var timestampPart = TimestampPart()
-//
-//    internal var user: User = User(id: UUID(), name: " ", symbol: "", timestamp: Date())
-//
-//
-//    required init(user: User) {
-//        self.user = user
-//    }
-//
-//    func reset() {
-//
-//    }
-//
-//    func makeIDPart() {
-//        self.idPart.text = String(self.user.id.uuidString)
-//    }
-//
-//    func makeNamePart() {
-//        self.namePart.text = self.user.name
-//    }
-//
-//    func makeSymbolPart() {
-//        self.symbolPart.text = self.user.symbol
-//    }
-//
-//    func maketTimestampPart() {
-//        self.timestampPart.text = String(self.user.timestamp.formatted(.dateTime))
-//    }
-//
-//    func result() -> some View {
-//
-//        return VStack {
-//
-//                topMenu(idPart: self.idPart, namePart: self.namePart, symbolPart: self.symbolPart, timestampPart: self.timestampPart)
-////                topMenu()
-//
-//        }
-//    }
-//
-//    struct topMenu: View {
-//        var idPart: IdPart
-//        var namePart: NamePart
-//        var symbolPart: SymbolPart
-//        var timestampPart: TimestampPart
-//        @StateObject var viewMenuState: ViewMenuState = ViewMenuState()
-//
-//        var body: some View {
-//            VStack {
-//                ViewMenu(viewMenuState: viewMenuState)
-//                Spacer()
-//
-////                if viewMenuState.showId {
-//                    self.idPart
-////                }
-////
-////                if viewMenuState.showName {
-//                    self.namePart
-////                }
-////
-////                if viewMenuState.showImage {
-//                    self.symbolPart
-////                }
-////
-////                if viewMenuState.showDate {
-//                    self.timestampPart
-////                }
-//
-//                IdPart()
-//                Spacer()
-//            }
-//        }
-//    }
-//
-//
-//
-//}
-//
-//class ViewMenuState: ObservableObject {
-//    var showImage: Bool = true
-//    var showId:    Bool = true
-//    var showName:  Bool = true
-//    var showDate:  Bool = true
-//}
-//
-//struct IdPart: View {
-//    var text: String?
-//
-//
-//    var body: some View {
-//        if let text = text {
-//            Labelfy(text: text)
-//        } else {
-//            Spacer()
-//        }
-//    }
-//}
-//struct NamePart: View {
-//    var text: String?
-//
-//    var body: some View {
-//        if let text = text {
-//            Labelfy(text: text)
-//        } else {
-//            Spacer()
-//        }
-//    }
-//}
-//struct SymbolPart: View {
-//    var text: String?
-//
-//    var body: some View {
-//        if let text = text {
-//            SFImagefy(sfName: text)
-//        } else {
-//            Spacer()
-//        }
-//    }
-//}
-//struct TimestampPart: View {
-//    var text: String?
-//
-//    var body: some View {
-//        if let text = text {
-//            Labelfy(text: text)
-//        } else {
-//            Spacer()
-//        }
-//    }
-//}

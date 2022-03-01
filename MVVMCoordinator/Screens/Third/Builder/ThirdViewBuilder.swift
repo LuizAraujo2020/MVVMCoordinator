@@ -10,8 +10,6 @@ import SwiftUI
 protocol ThirdViewBuilder {
     var user: User { set get }
     
-    func reset()
-    
     init(user: User)
     
     func dontMakeIDPart()

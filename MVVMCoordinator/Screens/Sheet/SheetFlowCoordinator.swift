@@ -1,3 +1,10 @@
+//
+//  SheetFlowStateProtocol.swift
+//  NANO08MVVMCoordinator
+//
+//  Created by Luiz Araujo on 26/02/22.
+//
+
 import SwiftUI
 
 protocol SheetFlowStateProtocol: ObservableObject {

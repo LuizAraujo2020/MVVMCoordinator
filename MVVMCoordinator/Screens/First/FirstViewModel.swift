@@ -1,3 +1,10 @@
+//
+//  FirstViewModel.swift
+//  MVVMCoordinator
+//
+//  Created by Luiz Araujo on 27/02/22.
+//
+
 import Foundation
 
 protocol FirstViewModelProtocol: ObservableObject {
@@ -9,8 +16,7 @@ final class FirstViewModel: FirstViewModelProtocol, FirstFlowStateProtocol {
     // MARK: - Flow State
     @Published var activeLink: FirstLink?
 
-    // MARK: - View Model
-
+    
     @Published var text: String
 
     init(text: String?) {

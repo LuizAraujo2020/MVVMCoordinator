@@ -61,8 +61,8 @@ struct ContentFlowCoordinator<State: ContentFlowStateProtocol, Content: View>: V
     }
 
     private func thirdDestination() -> some View {
-        let viewModel = ThirdViewModel()
-        let view = ThirdView(viewModel: viewModel, user: ThirdViewModel().users[0])
+        let viewModel = ThirdViewModel(user: userMock[0])
+        let view = ThirdView(viewModel: viewModel, user: viewModel.user)
         return view
     }
 

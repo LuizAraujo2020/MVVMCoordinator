@@ -1,20 +1,23 @@
+//
+//  ThirdViewModel.swift
+//  NANO08MVVMCoordinator
+//
+//  Created by Luiz Araujo on 26/02/22.
+//
+
 import Foundation
 
 protocol ThirdViewModelProtocol: ObservableObject {
-    var text: String { get }
-    
-    var users: [User] { get set }
+    var user: User { get set }
 }
 
 final class ThirdViewModel: ThirdViewModelProtocol, ThirdFlowStateProtocol {
 
     @Published var activeLink: ThirdLink?
 
-    let text = "Default Third View"
-
-    @Published var users: [User]
+    @Published var user: User
     
-    init(users: [User] = userMock) {
-        self.users = users
+    init(user: User) {
+        self.user = user
     }
 }

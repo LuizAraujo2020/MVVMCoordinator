@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct IdPart: View {
     var text: String?
     
@@ -20,6 +18,7 @@ struct IdPart: View {
         }
     }
 }
+
 struct NamePart: View {
     var text: String?
     
@@ -31,6 +30,7 @@ struct NamePart: View {
         }
     }
 }
+
 struct SymbolPart: View {
     var text: String?
     
@@ -42,6 +42,7 @@ struct SymbolPart: View {
         }
     }
 }
+
 struct TimestampPart: View {
     var text: String?
     
@@ -52,19 +53,6 @@ struct TimestampPart: View {
             Spacer()
         }
     }
-}
-//class ViewMenuState {
-//    var showImage: Bool = false
-//    var showId:    Bool = false
-//    var showName:  Bool = false
-//    var showDate:  Bool = false
-//}
-
-class ViewMenuState: ObservableObject {
-    @Published var showImage: Bool = true
-    @Published var showId:    Bool = true
-    @Published var showName:  Bool = true
-    @Published var showDate:  Bool = true
 }
 
 struct SFImagefy: View {
@@ -94,11 +82,11 @@ struct Labelfy: View {
     }
 }
 
-//struct BuilderHelpersViews_Previews: PreviewProvider {
-//    static var previews: some View {
-////        SFImagefy(sfName: "person.crop.rectangle.stack")
-////        Labelfy(text: UUID().uuidString)
+struct BuilderHelpersViews_Previews: PreviewProvider {
+    static var previews: some View {
+//        SFImagefy(sfName: "person.crop.rectangle.stack")
+        Labelfy(text: UUID().uuidString)
 //        ViewMenu(viewMenuState: ViewMenuState(), user: User(id: UUID(), name: " ", symbol: "", timestamp: Date()))
-//    }
-//}
+    }
+}
 

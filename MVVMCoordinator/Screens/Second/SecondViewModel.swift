@@ -1,3 +1,10 @@
+//
+//  SecondViewModelProtocol.swift
+//  NANO08MVVMCoordinator
+//
+//  Created by Luiz Araujo on 26/02/22.
+//
+
 import Foundation
 
 protocol SecondViewModelProtocol: ObservableObject {
@@ -14,7 +21,7 @@ final class SecondViewModel: SecondViewModelProtocol, SecondFlowStateProtocol {
         if let number = number {
             self.text = "Second View with number: \(number)"
         } else {
-            self.text = "Default Second Visadfsasew"
+            self.text = "Default Second View"
         }
     }
 }
